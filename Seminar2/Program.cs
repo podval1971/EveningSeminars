@@ -68,3 +68,4 @@ Console.Write("Input a second divider: ");
 int div2 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine(IsSquare(div1, div2));
+
