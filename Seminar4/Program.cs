@@ -55,7 +55,7 @@
 //    int count = 1;
 //    for (int i = 1; i <= num; i++) 
 //    {
-//        count = count * i;
+//        count*=i;
 //    }
 //    return count;
 // }
@@ -94,3 +94,19 @@
 // FillArray(array);
 // PrintArray(array);
 
+// Другой вариант решения
+int[] FillArray(int size)
+{
+    int[] arr = new int[size];
+    Random rnd = new Random(); // создаем объект класса (переменную типа Random)
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = rnd.Next(0, 2);
+    }
+    return arr;
+}
+
+Console.Write("Введите количество элементов массива: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] array = FillArray(size);
+Console.WriteLine($"[{string.Join(" ", array)}]"); // выводит массив без применения цикла как строку, первый аргумент - разделитель (, или пробел), второй - элементы
