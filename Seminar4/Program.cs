@@ -36,11 +36,11 @@ Console.WriteLine($"В числе {number} {DigitNumber(number)} цифр");
 
 // Другой вариант решения - через определение длины строки символов
 Console.Write("Введите число: ");
-string str = Console.ReadLine();
+string str = Console.ReadLine(); // число вводится как строка символов
 
-if(int.TryParse(str, out int number))
+if(int.TryParse(str, out int number)) // проверка что все символы в строке - цифры
 {
-    Console.WriteLine($"В числе {number} {str.Length} цифр");
+    Console.WriteLine($"В числе {number} {str.Length} цифр"); //определяется количество символов в строке
 }
 else
 {
