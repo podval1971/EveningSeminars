@@ -127,3 +127,5 @@ for (int i = 0; i < array.Length/2; i++)
 
 Console.WriteLine($"Исходный массив: [{string.Join(" ", array)}]");
 Console.WriteLine($"Новый массив: [{string.Join(" ", newArray)}]");
+
+// 
