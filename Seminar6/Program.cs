@@ -100,24 +100,52 @@
 // Console.WriteLine($"{string.Join(" ",newArr)}");
 
 // Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
-void PrintFib(int num)
-{
-    int num1 = 0;
-    int num2 = 1;
-    int num3 = 0;
-    for (int i = 3; i <= num; i++)
-    {
-        num3 = num1 + num2;
-        Console.Write($"{num3} ");
-        num1 = num2;
-        num2 = num3;
-    }
-}
+// void PrintFib(int num)
+// {
+//     int num1 = 0;
+//     int num2 = 1;
+//     int num3 = 0;
+//     for (int i = 3; i <= num; i++)
+//     {
+//         num3 = num1 + num2;
+//         Console.Write($"{num3} ");
+//         num1 = num2;
+//         num2 = num3;
+//     }
+// }
 
-Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-Console.Write("0 1 ");
-PrintFib(number);
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("0 1 ");
+// PrintFib(number);
 
 // Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
+int[] FillArrayRandom(int size)
+{
+    int[] arr = new int[size];
+    Random rnd = new Random(); // создаем объект класса (переменную типа Random)
+    for (int i = 0; i < arr.Length; i++)
+    {
+        arr[i] = rnd.Next(-9, 10);
+    }
+    return arr;
+}
 
+int[] CopyArray(int[] arr)
+{
+    int[] newArr = new int[arr.Length];
+    
+    for (int i = 0; i < arr.Length; i++)
+    {
+        newArr[i] = arr[i];
+    }
+    return newArr;
+}
+
+Console.Write("Введите количество элементов массива: ");
+int size = Convert.ToInt32(Console.ReadLine());
+int[] array = FillArrayRandom(size);
+
+Console.WriteLine($"Исходный массив: [{string.Join(" ", array)}]");
+int[] newArray =  CopyArray(array);
+Console.WriteLine($"Новый массив: [{string.Join(" ", newArray)}]");
