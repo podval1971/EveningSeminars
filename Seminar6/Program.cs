@@ -46,18 +46,18 @@
 
 // Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 // Первый вариант решения (при помощи рекурсии)
-void PrintBinary(int number)
-{
-    if(number <= 0) // Стоп-кран для рекурсии, останавливает ее
-        return;
+// void PrintBinary(int number)
+// {
+//     if(number <= 0) // Стоп-кран для рекурсии, останавливает ее
+//         return;
     
-    PrintBinary(number/2);
-    Console.Write(number%2);
-}
+//     PrintBinary(number/2);
+//     Console.Write(number%2);
+// }
 
-Console.Write("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-PrintBinary(number);
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// PrintBinary(number);
 
 // второй вариант решения
 int SizeofDif(int num)
@@ -93,7 +93,10 @@ int[] Reverse(int[] someArr)
     return someArr;
 }
 
-int[] result = Dif(2);
-Console.WriteLine($"Your array: [{string.Join(", ", result)}]");
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int[] result = Dif(number);
 int[] newArr = Reverse(result);
-Console.WriteLine($"Reverse array: [{string.Join(", ", newArr)}]");
+Console.WriteLine($"{string.Join(" ",newArr)}");
+
+// 
