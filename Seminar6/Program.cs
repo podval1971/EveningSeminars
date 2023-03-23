@@ -60,43 +60,64 @@
 // PrintBinary(number);
 
 // второй вариант решения
-int SizeofDif(int num)
-{
-  int count = 0;
-    while (num > 0)
-    {
-        num /= 2;
-        count++;
-    }
-  return count;
-}
+// int SizeofDif(int num)
+// {
+//   int count = 0;
+//     while (num > 0)
+//     {
+//         num /= 2;
+//         count++;
+//     }
+//   return count;
+// }
 
-int[] Dif(int num)
-{
-    int[] arr = new int[SizeofDif(num)];
-    for (int i = 0; i < arr.Length; i++)
-    {
-        arr[i] = num % 2;
-        num /= 2;
-    }
-    return arr;
-}
+// int[] Dif(int num)
+// {
+//     int[] arr = new int[SizeofDif(num)];
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = num % 2;
+//         num /= 2;
+//     }
+//     return arr;
+// }
 
-int[] Reverse(int[] someArr)
+// int[] Reverse(int[] someArr)
+// {
+//     for (int i = 0; i < someArr.Length/2; i++)
+//     {
+//         int temp = someArr[i];
+//         someArr[i] = someArr[someArr.Length - 1 - i];
+//         someArr[someArr.Length - 1 - i] = temp;
+//     }
+//     return someArr;
+// }
+
+// Console.Write("Введите число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// int[] result = Dif(number);
+// int[] newArr = Reverse(result);
+// Console.WriteLine($"{string.Join(" ",newArr)}");
+
+// Задача 44: Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: 0 и 1.
+void PrintFib(int num)
 {
-    for (int i = 0; i < someArr.Length/2; i++)
+    int num1 = 0;
+    int num2 = 1;
+    int num3 = 0;
+    for (int i = 3; i <= num; i++)
     {
-        int temp = someArr[i];
-        someArr[i] = someArr[someArr.Length - 1 - i];
-        someArr[someArr.Length - 1 - i] = temp;
+        num3 = num1 + num2;
+        Console.Write($"{num3} ");
+        num1 = num2;
+        num2 = num3;
     }
-    return someArr;
 }
 
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int[] result = Dif(number);
-int[] newArr = Reverse(result);
-Console.WriteLine($"{string.Join(" ",newArr)}");
+Console.Write("0 1 ");
+PrintFib(number);
 
-// 
+// Задача 45: Напишите программу, которая будет создавать копию заданного массива с помощью поэлементного копирования.
+
