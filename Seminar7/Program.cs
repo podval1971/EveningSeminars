@@ -152,7 +152,7 @@ int SumMainDiagonal(int[,] arr)
 
     for (int i = 0; i < index; i++)
     {
-        sum = sum + arr[i,i];
+        sum += arr[i,i]; // sum = sum + arr[i,j]
     }
     return sum;
 }
