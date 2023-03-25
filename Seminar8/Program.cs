@@ -77,9 +77,9 @@ void PrintMatrix(int[,] array)
 int[,] ChangeRowColumn(int[,] arr)
 {
     int[,] arrNew = new int[arr.GetLength(1),arr.GetLength(0)];
-    for (int i = 0; i < arr.GetLength(1); i++)
+    for (int i = 0; i < arrNew.GetLength(0); i++)
     {
-        for (int j = 0; j < arr.GetLength(0); j++)
+        for (int j = 0; j < arrNew.GetLength(1); j++)
         {
             arrNew[i,j] = arr[j,i];
         }
@@ -96,3 +96,7 @@ PrintMatrix(matrix);
 int[,] matrixNew = ChangeRowColumn(matrix);
 Console.WriteLine();
 PrintMatrix(matrixNew);
+
+//Задача 57: Составить частотный словарь элементов двумерного массива.
+// Частотный словарь содержит информацию о том, сколько раз встречается элемент входных данных.
+
