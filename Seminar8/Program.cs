@@ -129,14 +129,22 @@ void FreqDict(int[,] arr)
 {
     int[] res = new int[10];
         
-    for (int i = 0; i < arr.GetLength(0); i++)
+    // for (int i = 0; i < arr.GetLength(0); i++)
+    // {
+    //     for (int j = 0; j < arr.GetLength(1); j++)
+    //     {
+    //         for (int k = 0; k < 10; k++)
+    //         {
+    //             if(arr[i,j] == k) res[k]++;
+    //         }
+    //     }
+    // }
+
+    for (int i = 0; i < arr.GetLength(0); i++) // другой вариант решения через матрицу
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            for (int k = 0; k < 10; k++)
-            {
-                if(arr[i,j] == k) res[k]++;
-            }
+            res[arr[i,j]]++;            
         }
     }
 
